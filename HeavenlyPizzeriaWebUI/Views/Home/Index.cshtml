@@ -1,4 +1,6 @@
-﻿@{
+﻿@model HeavenlyPizzeriaWebUI.Models.HomeViewModel
+
+@{
     ViewBag.Title = "Pizza HeavenHome Page";
 }
 
@@ -9,21 +11,17 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Chastity yum</h2>
-        <p>
-            Pure pizza with only the best ingriedents to love.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Order it&raquo;</a></p>
+    @{foreach (var pizza in Model.Pizzas)
+        {
+            <div class="col-md-4">
+                <h2>@pizza.Name ($@pizza.Price)</h2>
+                <p>
+                    @pizza.Description
+                </p>
+                <p>
+                        <a class="btn btn-default" href="@Url.Action("OrderPizza", "Home", new { id = pizza.id })">Order it! &raquo;</a>
+                </p>
+            </div>
+            }
+        }
     </div>
-    <div class="col-md-4">
-        <h2>Temperance</h2>
-        <p>Vege lovers delight.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Order it &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Charity</h2>
-        <p>Meat Lovers are going to be oncloud 9.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Order it &raquo;</a></p>
-    </div>
-</div>

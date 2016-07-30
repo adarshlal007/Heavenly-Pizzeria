@@ -4,7 +4,7 @@
     using System.ComponentModel.DataAnnotations;
 
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
-    public class NonEmptyGuidAttribute : ValidationAttribute
+    public sealed class NonEmptyGuidAttribute : ValidationAttribute
     {
         public NonEmptyGuidAttribute()
             : base("The {0} field is required.")

@@ -21,7 +21,7 @@
 
             container.RegisterDecorator(typeof(ICommandHandler<>),
                 typeof(FromWcfFaultTranslatorCommandHandlerDecorator<>));
-
+          
             container.Verify();
         }
 

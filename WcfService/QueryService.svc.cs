@@ -6,22 +6,22 @@
     using System.ServiceModel;
     using Code;
 
-    [ServiceContract(Namespace = "http://www.cuttingedge.it/solid/queryservice/v1.0")]
+    
+    [ServiceContract(Namespace = "http://schemas.datacontract.org/2004/07/Contract.DTOs")]
     [ServiceKnownType(nameof(GetKnownTypes))]
     public class QueryService
     {
         public static IEnumerable<Type> GetKnownTypes(ICustomAttributeProvider provider) =>
             Bootstrapper.GetQueryAndResultTypes();
 
-        [OperationContract]
-        [FaultContract(typeof(ValidationError))]
-        public object Execute(dynamic query) => ExecuteQuery(query);
+        [OperationContract]        
+        public  object ExecuteQuery(dynamic query) {
+            //    => ExecuteQuery(query);
+            //internal static object ExecuteQuery(dynamic query)
+            //{
+            //Type queryType = query.GetType();
 
-        internal static object ExecuteQuery(dynamic query)
-        {
-            Type queryType = query.GetType();
-
-            dynamic queryHandler = Bootstrapper.GetQueryHandler(query.GetType());
+            dynamic queryHandler = Bootstrapper.GetQueryHandlerInstance(query);
 
             try
             {

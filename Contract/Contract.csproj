@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Commands\Orders\CreateOrderCommand.cs" />
     <Compile Include="Commands\Orders\ShipOrderCommand.cs" />
+    <Compile Include="DTOs\Pizza.cs" />
     <Compile Include="DTOs\Address.cs" />
     <Compile Include="DTOs\OrderInfo.cs" />
     <Compile Include="IQuery.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Queries\Orders\GetUnshippedOrdersForCurrentCustomerQuery.cs" />
     <Compile Include="Queries\Paged.cs" />
     <Compile Include="Queries\PageInfo.cs" />
+    <Compile Include="Queries\Pizza\GetAllPizzasQuery.cs" />
     <Compile Include="Validators\CompositeValidationResult.cs" />
     <Compile Include="Validators\NonEmptyGuidAttribute.cs" />
     <Compile Include="Validators\ValidateObjectAttribute.cs" />

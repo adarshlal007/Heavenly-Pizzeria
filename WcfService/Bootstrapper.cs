@@ -12,6 +12,9 @@
     using SimpleInjector;
     using WcfService.Code;
     using WcfService.CrossCuttingConcerns;
+    using SimpleInjector.Extensions;
+    using SimpleInjector.Integration.Wcf;
+    
 
     public static class Bootstrapper
     {
@@ -22,6 +25,16 @@
 
         public static object GetQueryHandler(Type queryType) =>
             container.GetInstance(CreateQueryHandlerType(queryType));
+
+        public static object GetInstance(Type serviceType)
+        {
+            return container.GetInstance(serviceType);
+        }
+
+        public static T GetInstance<T>() where T : class
+        {
+            return container.GetInstance<T>();
+        }
 
         public static IEnumerable<Type> GetCommandTypes() => BusinessLayerBootstrapper.GetCommandTypes();
 
@@ -48,6 +61,18 @@
             container.Verify();
         }
 
+        internal static dynamic GetQueryHandlerInstance(dynamic query)
+        {
+            Type queryType = query.GetType();
+            var queryHandlerType = typeof(IQueryHandler<,>).MakeGenericType(queryType, queryType.GetQueryResultType());
+            return container.GetInstance(queryHandlerType);
+        }
+
+        internal static dynamic GetCommandHandlerInstance(dynamic command)
+        {
+            Type commandHandlerType = typeof(ICommandHandler<>).MakeGenericType(command.GetType());
+            return container.GetInstance(commandHandlerType);
+        }
         public static void Log(Exception ex)
         {
             Debug.WriteLine(ex.ToString());

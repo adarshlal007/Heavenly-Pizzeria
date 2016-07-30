@@ -22,8 +22,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiService", "WebApiService\WebApiService.csproj", "{B71A8419-1827-48A4-913E-467B52A7C2F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavenlyPizzeriaWebUI", "HeavenlyPizzeriaWebUI\HeavenlyPizzeriaWebUI.csproj", "{BE6F0A69-C54C-4E9B-8243-AB636EC9E36C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CCFA6865-6B10-4D7C-B6B8-8C37BBFE7DA1} = {CCFA6865-6B10-4D7C-B6B8-8C37BBFE7DA1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavenlyPizzeriaWebUI.Tests", "HeavenlyPizzeriaWebUI.Tests\HeavenlyPizzeriaWebUI.Tests.csproj", "{BEF6B452-23C2-40CA-80FF-9D2118CF44AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavenlyPizzeriaUI2", "WebApplication1\HeavenlyPizzeriaUI2.csproj", "{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +114,18 @@ Global
 		{BEF6B452-23C2-40CA-80FF-9D2118CF44AA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BEF6B452-23C2-40CA-80FF-9D2118CF44AA}.Release|x86.ActiveCfg = Release|Any CPU
 		{BEF6B452-23C2-40CA-80FF-9D2118CF44AA}.Release|x86.Build.0 = Release|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Debug|x86.Build.0 = Debug|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Release|x86.ActiveCfg = Release|Any CPU
+		{CDE32B77-2EE0-4CF7-B0F8-2AF2DA064F33}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

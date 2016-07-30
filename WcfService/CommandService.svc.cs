@@ -6,7 +6,7 @@
     using System.ServiceModel;
     using Code;
 
-    [ServiceContract(Namespace = "http://www.solid.net/commandservice/v1.0")]
+    [ServiceContract(Namespace = "http://schemas.datacontract.org/2004/07/Contract.DTOs")]
     [ServiceKnownType(nameof(GetKnownTypes))]
     public class CommandService
     {

@@ -4,7 +4,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
 
-    public class ValidateObjectAttribute : ValidationAttribute
+    public sealed class ValidateObjectAttribute : ValidationAttribute
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
