@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Contract.Queries;
 using Contract.Queries.Orders;
 using Contract.Queries.Pizza;
+using HeavenlyPizzeriaWebUI.Models;
 
 namespace HeavenlyPizzeriaWebUI.Controllers
 {
@@ -20,13 +21,13 @@ namespace HeavenlyPizzeriaWebUI.Controllers
             queryProcessor = qp;
         }
         // GET: OrderPizza
+        [HttpGet]
         public ActionResult Index(int id)
         {
-
             var query = new GetPizzaByIdQuery { Id = id };
             var pizza = queryProcessor.Execute(query);
 
-            var model = new HeavenlyPizzeriaWebUI.Models.PizzaOrder
+            var model = new PizzaOrder
             {
                 Pizza = new Models.Pizza
                 {
@@ -38,5 +39,13 @@ namespace HeavenlyPizzeriaWebUI.Controllers
             };
             return View(model);
         }
+
+
+        [HttpPost]
+        public ActionResult Index(PizzaOrder order)
+        {
+            return RedirectToAction("Index", "OrderSubmitted", order);
+        }
+       
     }
 }

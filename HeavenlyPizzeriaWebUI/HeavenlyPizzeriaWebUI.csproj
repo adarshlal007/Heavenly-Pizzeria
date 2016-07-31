@@ -196,6 +196,7 @@
     <Compile Include="Code\WcfServiceQueryHandlerProxy.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderPizzaController.cs" />
+    <Compile Include="Controllers\OrderSubmittedController.cs" />
     <Compile Include="CrossCuttingConcerns\FromWcfFaultTranslatorCommandHandlerDecorator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -370,6 +371,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\OrderPizza\Index.cshtml" />
+    <Content Include="Views\OrderSubmitted\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
