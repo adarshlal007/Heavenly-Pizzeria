@@ -60,6 +60,7 @@
     <Compile Include="Queries\Paged.cs" />
     <Compile Include="Queries\PageInfo.cs" />
     <Compile Include="Queries\Pizza\GetAllPizzasQuery.cs" />
+    <Compile Include="Queries\Pizza\GetPizzaByIdQuery.cs" />
     <Compile Include="Validators\CompositeValidationResult.cs" />
     <Compile Include="Validators\NonEmptyGuidAttribute.cs" />
     <Compile Include="Validators\ValidateObjectAttribute.cs" />

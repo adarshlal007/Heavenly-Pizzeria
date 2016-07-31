@@ -20,6 +20,7 @@ namespace HeavenlyPizzeriaWebUI.QueryService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Contract.Queries.PageInfo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Contract.Queries.Paged<Contract.DTOs.OrderInfo>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Contract.Queries.Pizza.GetAllPizzasQuery))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Contract.Queries.Pizza.GetPizzaByIdQuery))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Contract.Queries.Orders.GetOrderByIdQuery))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Contract.Queries.Orders.GetUnshippedOrdersForCurrentCustomerQuery))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Contract.DTOs.Pizza[]))]
