@@ -73,6 +73,10 @@
       <Project>{DDD88351-9A73-4212-85DC-F769B37D5057}</Project>
       <Name>Contract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Repo\Repo.csproj">
+      <Project>{78252868-1c6e-4961-9b07-1c8083d8b649}</Project>
+      <Name>Repo</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
